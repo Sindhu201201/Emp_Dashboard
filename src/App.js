@@ -2,14 +2,18 @@ import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./Login";
 import Dashboard from "./Dashboard";
+import { useEffect } from 'react';
 
 function ProtectedRoute({ children }) {
   const isLoggedIn = sessionStorage.getItem("login");
-  return isLoggedIn ? children : <Navigate to="/login" />;
+  return isLoggedIn ? children : <Navigate to="/login" replace />;
 }
 
 
 export default function App() {
+  useEffect(() => {
+    sessionStorage.clear();
+  }, []);
   return (
     <BrowserRouter>
       <Routes>
