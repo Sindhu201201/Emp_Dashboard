@@ -18,11 +18,11 @@ export default function EmployeeTable({
       <table>
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Image</th>
-            <th>Name</th>
+            <th>Employee ID</th>
+            <th>Profile Image</th>
+            <th>Full Name</th>
             <th>Gender</th>
-            <th>DOB</th>
+            <th>Date of Birth (DOB)</th>
             <th>State</th>
             <th>Status</th>
             <th className="no-print">Actions</th>
