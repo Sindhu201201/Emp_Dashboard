@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+p {
+  margin-top: 0;
+  color: #666;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Inputs */
+input, select {
+  padding: 8px;
+  margin: 6px 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+button:hover {
+  background: #135ba1;
+}
+
+button.secondary {
+  background: #777;
+}
+
+button.secondary:hover {
+  background: #555;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th {
+  background: #f0f2f5;
+  text-align: left;
+}
+
+td, th {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background: #f9f9f9;
+}
+
+img {
+  border-radius: 4px;
+}
+
+/* Print */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #print-table,
+  #print-table * {
+    visibility: visible;
+  }
+
+  #print-table {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  .no-print {
+      display: none !important;
+    }
+}
+
+table, th, td {
+border: 1px solid black;
+border-collapse: collapse;
+}
