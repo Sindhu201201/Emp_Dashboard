@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import states from "./states";
 
 export default function EmployeeForm({
@@ -15,6 +15,8 @@ export default function EmployeeForm({
     active: true,
     image: "",
   });
+
+  const fileInputRef = useRef(null);
 
   useEffect(() => {
     if (editEmp) setForm(editEmp);
@@ -47,6 +49,9 @@ export default function EmployeeForm({
       image: "",
     });
     setEditEmp(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = ""; // Clear the file input
+    }
   };
 
   return (
@@ -102,12 +107,16 @@ export default function EmployeeForm({
 
         <div className="form-group">
           <label>Profile Image</label>
-          <input type="file" onChange={handleImage} />
+          <input type="file" onChange={handleImage} ref={fileInputRef} />
         </div>
 
         <div className="form-group image-save">
           {form.image && (
-            <img src={form.image} alt="preview" className="preview-img" />
+            <img
+              src={form.image}
+              alt="preview"
+              className="preview-img"
+            />
           )}
 
           <button onClick={save}>Save</button>
