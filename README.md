@@ -19,7 +19,7 @@ All data is stored in browser LocalStorage (no backend).
 ## Tech Stack
 - React (JavaScript)
 - React Router
-- LocalStorage
+- SessionStorage
 - CSS
 
 ---
@@ -56,7 +56,7 @@ Password: admin123
 
 ## Assumptions & Design Decisions
 - Authentication is mocked as per assignment instructions
-- LocalStorage is used instead of backend APIs
+- SocalStorage and dummmy data are used instead of backend APIs
 - Simple UI is used to focus on functionality and clarity
 - Same form is reused for Add and Edit employee
 
@@ -71,4 +71,4 @@ Password: admin123
 ---
 
 ## Author
-Frontend React Developer
+Sindhu Jangam (Frontend React Developer)
