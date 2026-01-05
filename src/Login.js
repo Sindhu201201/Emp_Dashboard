@@ -16,11 +16,34 @@ export default function Login() {
   };
 
   return (
-    <div className="card">
-      <h2>Login</h2>
-      <input placeholder="Username" onChange={e => setUser(e.target.value)} />
-      <input type="password" placeholder="Password" onChange={e => setPass(e.target.value)} />
-      <button onClick={login}>Login</button>
+    <div className="login-container">
+      <div className="card login-card">
+        <h2>Login</h2>
+
+        <div className="form-group">
+          <label>Username</label>
+          <input
+            type="text"
+            placeholder="Enter username"
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Enter password"
+            value={pass}
+            onChange={(e) => setPass(e.target.value)}
+          />
+        </div>
+
+        <button onClick={login} disabled={!user || !pass}>
+          Login
+        </button>
+      </div>
     </div>
   );
 }

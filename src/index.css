@@ -168,3 +168,137 @@ border-collapse: collapse;
 .switch input:checked + .slider:before {
   transform: translateX(20px);
 }
+
+/* Form Styling */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.image-preview img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-top: 2px;
+}
+
+.form-actions {
+  margin-top: 2px;
+}
+
+.form-actions button {
+  padding: 8px 20px;
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-actions button:hover {
+  background-color: #125aa3;
+}
+.image-preview {
+  display: flex;
+  align-items: flex-end;
+}
+
+.image-preview button {
+  height: 38px;
+}
+
+/* Login Page Styling */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.login-card {
+  width: 360px;
+  padding: 24px;
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.login-card .form-group {
+  margin-bottom: 4px;
+}
+
+.login-card label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.login-card button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-card button:disabled {
+  background-color: #9ec3eb;
+  cursor: not-allowed;
+}
+
+/* Image + Save together */
+.image-save {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.preview-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-left: 5px;
+}
+
+
+
+
