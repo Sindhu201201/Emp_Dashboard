@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import EmployeeForm from "./EmployeeForm";
 import EmployeeTable from "./EmployeeTable";
 import Filters from "./Filters";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Dashboard() {
   const [employees, setEmployees] = useState([]);
@@ -24,11 +26,19 @@ export default function Dashboard() {
       filters.status ? String(e.active) === filters.status : true
     );
 
+    const navigate = useNavigate();
+
+    const logout = () => {
+    sessionStorage.clear();
+    navigate("/login");
+    };
+
   return (
     <div className="container">
-      <h1 style={{textAlign:"center"}}>Employee Dashboard</h1>
-      <p style={{textAlign:"center"}}>Total Employees: {employees.length}</p>
-      <Filters setFilters={setFilters} />
+    <button className="no-print" style={{float:"right"}} onClick={logout}>Logout</button>
+      <h1 style={{textAlign:"center"}}>Employee Management Dashboard</h1>
+      <p style={{textAlign:"center"}}>Total Number of Employees: {employees.length}</p>
+      <Filters setFilters={setFilters} filters={filters} />
       <EmployeeForm
         employees={employees}
         setEmployees={setEmployees}
