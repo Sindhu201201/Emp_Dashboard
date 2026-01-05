@@ -12,8 +12,14 @@ function ProtectedRoute({ children }) {
 
 export default function App() {
   useEffect(() => {
+  const handleUnload = () => {
     sessionStorage.clear();
-  }, []);
+  };
+  window.addEventListener("beforeunload", handleUnload);
+  return () => {
+    window.removeEventListener("beforeunload", handleUnload);
+  };
+}, []);
   return (
     <BrowserRouter>
       <Routes>
