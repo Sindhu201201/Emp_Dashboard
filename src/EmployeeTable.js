@@ -38,17 +38,23 @@ export default function EmployeeTable({
               <td>{e.dob}</td>
               <td>{e.state}</td>
               <td>
+                <label className="switch">
                 <input
-                  type="checkbox"
-                  checked={e.active}
-                  onChange={() =>
+                    type="checkbox"
+                    checked={e.active}
+                    onChange={() =>
                     setEmployees(
-                      employees.map((emp) =>
+                        employees.map(emp =>
                         emp.id === e.id ? { ...emp, active: !emp.active } : emp
-                      )
+                        )
                     )
-                  }
+                    }
                 />
+                <span className="slider"></span>
+                </label>
+                <span style={{ marginLeft: "8px" }}>
+                {e.active ? "Active" : "Inactive"}
+                </span>
               </td>
               <td className="no-print">
                 <button onClick={() => setEditEmp(e)}>Edit</button>
