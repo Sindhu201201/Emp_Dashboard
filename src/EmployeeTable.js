@@ -5,7 +5,7 @@ export default function EmployeeTable({
   filters,
 }) {
   const del = (id) => {
-    if (window.confirm("Delete employee?")) {
+    if (window.confirm(`Do you really want to delete ${id} employee record?`)) {
       setEmployees(employees.filter((e) => e.id !== id));
     }
   };
