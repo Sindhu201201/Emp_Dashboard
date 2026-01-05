@@ -26,8 +26,8 @@ export default function Dashboard() {
 
   return (
     <div className="container">
-      <h1>Employee Dashboard</h1>
-      <p>Total Employees: {employees.length}</p>
+      <h1 style={{textAlign:"center"}}>Employee Dashboard</h1>
+      <p style={{textAlign:"center"}}>Total Employees: {employees.length}</p>
       <Filters setFilters={setFilters} />
       <EmployeeForm
         employees={employees}

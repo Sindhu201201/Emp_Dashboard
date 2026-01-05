@@ -12,9 +12,9 @@ export default function EmployeeTable({
 
   return (
     <>
-      {(filters.name || filters.gender || filters.status) && (
+      {(filters.name || filters.gender || filters.status) ? (
         <h3>Filtered Employee Results</h3>
-      )}
+      ) : (<h3>Employee List</h3>)}
       <table>
         <thead>
           <tr>
