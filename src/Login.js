@@ -8,7 +8,7 @@ export default function Login() {
 
   const login = () => {
     if (user === "admin" && pass === "admin123") {
-      sessionStorage.setItem("login", true);
+      sessionStorage.setItem("login", "true");
       navigate("/dashboard");
     } else {
       alert("Invalid credentials");
@@ -16,7 +16,7 @@ export default function Login() {
   };
 
   return (
-    <div className="login-container">
+    <form className="login-container" onSubmit={(e) => { e.preventDefault(); login(); }}>
       <div className="card login-card">
         <h2>Login</h2>
 
@@ -40,10 +40,10 @@ export default function Login() {
           />
         </div>
 
-        <button onClick={login} disabled={!user || !pass}>
+        <button type="submit" disabled={!user || !pass}>
           Login
         </button>
       </div>
-    </div>
+    </form>
   );
 }
